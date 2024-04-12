@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fugaz+One&family=Merienda:wght@300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "ethnocentric";
+  src: url("./assets/fonts/ethnocentricrg.otf") format("truetype");
+}
+@font-face {
+  font-family: "nasalization";
+  src: url("./assets/fonts/nasalization-rg.otf") format("truetype");
+}
+
+body {
+  background-image: url("assets/tranquil-scene-autumn-forest-by-pond-generated-by-ai.jpg");
+  z-index: -1;
+  background-position: center;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: white;
+}
+
+
+
+/* Main Page */
+.mainSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile {
+  position: absolute;
+  left: 0;
+  margin-top: 10px;
+  margin: 30px;
+  width: 28px;
+  padding: 3px;
+  border: 2px solid white;
+  background-color: transparent;
+  backdrop-filter: blur(50px);
+  border-radius: 50%;
+  transition: all 0.35s ease-in-out;
+}
+.profile:hover {
+  opacity: 0.7;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.475);
+}
+.sourceCode {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'nasalization';
+  margin-top: 10px;
+  margin: 30px;
+  padding: 2px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.35s ease-in-out;
+}
+.sourceCode:hover {
+  opacity: 0.7;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.475);
+}
+
+.Landing {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  top: 30%;
+}
+.timeDetail {
+  font-size: 102px;
+  font-family: "ethnocentric";
+}
+
+.greetingUser {
+  font-family: "nasalization";
+  font-size: 24px;
+}
+
+/* Search css*/
+
+.searchBar {
+  margin: 25px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: row;
+  width: 500px;
+  border-radius: 25px;
+  border: transparent;
+  background-color: rgba(255, 255, 255, 0.053);
+  backdrop-filter: blur(50px);
+  gap: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.392);
+}
+.searchInput {
+  font-family: "nasalization";
+  height: 32px;
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 450px;
+  text-align: start;
+  color: white;
+  padding: 3px;
+  font-size: 16px;
+}
+.searchInput::placeholder {
+  font-size: 18px;
+  color: white;
+  opacity: 0.5;
+}
+.logo {
+  filter: contrast(200%);
+}
+
+/* HeadBar */
+.navbar {
+  background-color: transparent;
+  outline: none;
+  backdrop-filter: blur(50px);
+  padding: 15px;
+  border: none;
+  border-radius: 45px;
+  margin-top: 10px;
+}
+
+.linkage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.anchor {
+  position: relative;
+  font-family: "nasalization";
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  padding: 0 5px;
+  font-weight: 450;
+}
+.anchor::before,
+.anchor::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.35s ease-in-out, color 0.35s ease-in-out,
+    filter 0.35s ease-in-out;
+}
+
+.anchor::before {
+  left: 5px;
+}
+
+.anchor::after {
+  right: 5px;
+}
+
+.anchor:hover::before,
+.anchor:hover::after {
+  width: calc(50% - 10px);
+}
+.anchor:hover {
+  color: #0077b5;
+  filter: drop-shadow(0 0 5px #0077b5);
+}
+.anchor:hover:nth-of-type(2) {
+  color: #6e5494;
+  filter: drop-shadow(0 0 5px #6e5494);
+}
+
+.anchor:hover:nth-of-type(3) {
+  color: #0056d2;
+  filter: drop-shadow(0 0 5px #0056d2);
+}
+.anchor:hover:nth-of-type(4) {
+  color: #f24e1e;
+  filter: drop-shadow(0 0 5px #f24e1e);
+}
+.anchor:hover:nth-of-type(5) {
+  color: #128c7e;
+  filter: drop-shadow(0 0 5px #128c7e);
+}
+.anchor:hover:nth-of-type(6) {
+  color: red;
+  filter: drop-shadow(0 0 5px red);
+}
+
+.quotes {
+  font-size: 24px;
+  font-family: "nasalization";
+}
+
+/* Taskbar css */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.date {
+  font-family: "nasalization";
+  background-color: transparent;
+  backdrop-filter: blur(50px);
+  padding: 10px;
+  display: flex;
+  align-items: center; /* Align text vertically to the center */
+  justify-content: flex-start; /* Align text horizontally to the center */
+}
