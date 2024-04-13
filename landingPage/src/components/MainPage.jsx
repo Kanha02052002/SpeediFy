@@ -47,6 +47,7 @@ export default function MainPage() {
         <HeadBar />
         <div className="mainContainer">
           <span className="timeDetail">{dateTime.time}</span>
+          
           <span className="greetingUser">{greetUser()}, Kanha</span>
           <Search />
           <Quotes />
