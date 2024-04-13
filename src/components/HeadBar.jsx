@@ -1,12 +1,18 @@
 import React from "react";
 import Profile from "../assets/icons/profile (1).png";
 import External from "../assets/icons/external.png";
+
 export default function HeadBar() {
   function portfolio() {
     window.location.href =
       "https://kanha02052002.github.io/first-student-portfolio/";
   }
 
+  function sourceCodelink() {
+    window.location.href =
+      "https://github.com/Kanha02052002/SpeediFy";
+  }
+  
   return (
     <div className="mainSection">
       <img
@@ -54,10 +60,8 @@ export default function HeadBar() {
           </a>
         </div>
       </div>
-      <span className="sourceCode">
-        <span class="material-symbols-outlined" title="Get the Source Code">
-          code
-        </span>
+      <span className="sourceCode" onClick={sourceCodelink} title="Get the Source Code">
+        <span className="material-symbols-outlined">code</span>
       </span>
     </div>
   );
