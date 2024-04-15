@@ -4,7 +4,7 @@ import Search from "./Search";
 import HeadBar from "./HeadBar";
 import Quotes from "./Quotes";
 
-export default function MainPage() {
+export default function MainPage(props) {
   const [dateTime, setDateTime] = useState(getCurrentDateTime());
 
   function getCurrentDateTime() {
@@ -48,7 +48,7 @@ export default function MainPage() {
         <div className="mainContainer">
           <span className="timeDetail">{dateTime.time}</span>
           
-          <span className="greetingUser">{greetUser()}, Kanha</span>
+          <span className="greetingUser">{greetUser()}, {props.name}</span>
           <Search />
           <Quotes />
         </div>

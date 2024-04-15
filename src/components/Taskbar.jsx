@@ -14,34 +14,15 @@ import Teams from "../assets/icons/teams.png";
 import Notion from "../assets/icons/notion.png";
 import Kaggle from "../assets/icons/kaggle.png";
 import LeetCode from "../assets/icons/leetcode.png";
+import Insta from "../assets/icons/instagram.png";
+import Gmail from "../assets/icons/gmail.png";
+import Colab from "../assets/icons/gcolab.png";
+import Replit from "../assets/icons/replit.png";
+import Netflix from "../assets/icons/netflix.png";
+import GCloud from "../assets/icons/gcloud.png";
 
 export default function FootBar() {
-  const now = new Date();
-
-  function getCurrentDateTime() {
-    const date =
-      reDesign(now.getDate()) +
-      "-" +
-      reDesign(now.getMonth() + 1) +
-      "-" +
-      now.getFullYear();
-    const time = reDesign(now.getHours()) + ":" + reDesign(now.getMinutes());
-    return { date, time };
-  }
-
-  const [dateTime, setDateTime] = useState(getCurrentDateTime());
-
-  function reDesign(a) {
-    return a >= 0 && a < 10 ? "0" + a : a;
-  }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDateTime(getCurrentDateTime());
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+  
 
   return (
     <div className="taskbar">
@@ -52,11 +33,23 @@ export default function FootBar() {
         <a href="https://www.kaggle.com/">
           <img className="icon" src={Kaggle} alt="" />
         </a>
+        <a href="https://colab.research.google.com/">
+          <img className="icon-1" src={Colab} alt="" />
+        </a>
+        <a href="https://replit.com/login">
+          <img className="icon-1" src={Replit} alt="" />
+        </a>
+        <a href="https://cloud.google.com/consulting/skills-boost">
+          <img className="icon-1" src={GCloud} alt="" />
+        </a>
         <a href="https://open.spotify.com/">
-          <img className="icon" src={Spotify} alt="" />
+          <img className="icon-1" src={Spotify} alt="" />
         </a>
         <a href="https://music.youtube.com/">
           <img className="icon" src={YTMusic} alt="" />
+        </a>
+        <a href="https://www.netflix.com/in/">
+          <img className="icon-1" src={Netflix} alt="" />
         </a>
         <a href="https://slack.com/">
           <img className="icon" src={Slack} alt="" />
@@ -64,8 +57,14 @@ export default function FootBar() {
         <a href="https://discord.com/">
           <img className="icon" src={Discord} alt="" />
         </a>
+        <a href="https://www.instagram.com/">
+          <img className="icon" src={Insta} alt="" />
+        </a>
         <a href="https://login.microsoftonline.com/">
           <img className="icon" src={Teams} alt="" />
+        </a>
+        <a href="https://mail.google.com/mail/u/0/?ogbl#inbox">
+          <img className="icon" src={Gmail} alt="" />
         </a>
         <a href="https://www.notion.so/">
           <img className="icon" src={Notion} alt="" />
