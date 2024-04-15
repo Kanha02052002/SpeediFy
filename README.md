@@ -1,3 +1,14 @@
+
+# SimpliFy 
+(repo with SpeediFy)
+
+A simplified and personalize version of a page where you can find all important links that you need.
+
+
+## Authors
+
+- [Kanha](https://github.com/Kanha02052002/)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
